@@ -96,21 +96,21 @@
                         </a>
                     </li>
                 @endcan
-                @can('schedule_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.schedules.index") }}" class="nav-link {{ request()->is('admin/schedules') || request()->is('admin/schedules/*') ? 'active' : '' }}">
-                            <i class="fa-fw far fa-clock">
+{{--                @can('schedule_access')--}}
+{{--                    <li class="nav-item">--}}
+{{--                        <a href="{{ route("admin.schedules.index") }}" class="nav-link {{ request()->is('admin/schedules') || request()->is('admin/schedules/*') ? 'active' : '' }}">--}}
+{{--                            <i class="fa-fw far fa-clock">--}}
 
-                            </i>
-                            <p>
-                                <span>{{ trans('cruds.schedule.title') }}</span>
-                            </p>
-                        </a>
-                    </li>
-                @endcan
+{{--                            </i>--}}
+{{--                            <p>--}}
+{{--                                <span>{{ trans('cruds.schedule.title') }}</span>--}}
+{{--                            </p>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                @endcan--}}
                 @can('venue_access')
                     <li class="nav-item">
-                        <a href="{{ route("admin.venues.index") }}" class="nav-link {{ request()->is('admin/venues') || request()->is('admin/venues/*') ? 'active' : '' }}">
+                        <a href="{{ route("admin.services.index") }}" class="nav-link {{ request()->is('admin/services') || request()->is('admin/services/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-map-marker-alt">
 
                             </i>
@@ -170,7 +170,7 @@
                 @endcan
                 @can('amenity_access')
                     <li class="nav-item">
-                        <a href="{{ route("admin.amenities.index") }}" class="nav-link {{ request()->is('admin/amenities') || request()->is('admin/amenities/*') ? 'active' : '' }}">
+                        <a href="{{ route("admin.facilities.index") }}" class="nav-link {{ request()->is('admin/facilities') || request()->is('admin/facilities/*') ? 'active' : '' }}">
                             <i class="fa-fw fas fa-check">
 
                             </i>

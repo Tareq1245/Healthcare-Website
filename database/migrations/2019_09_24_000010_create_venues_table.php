@@ -13,11 +13,11 @@ class CreateVenuesTable extends Migration
 
             $table->string('name');
 
-            $table->string('address');
+            $table->string('address')->nullable();
 
-            $table->string('latitude');
+            $table->string('latitude')->nullable();
 
-            $table->string('longitude');
+            $table->string('longitude')->nullable();
 
             $table->longText('description')->nullable();
 

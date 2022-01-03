@@ -2,10 +2,10 @@
 
 @section('content')
 <main id="main" class="main-page">
-  <section id="speakers-details" class="wow fadeIn">
+  <section id="speakers-details" class="wow fadeIn" style="visibility: visible">
     <div class="container">
       <div class="section-header">
-        <h2>Speaker Details</h2>
+        <h2>Doctors Details</h2>
         <p>Praesentium ut qui possimus sapiente nulla.</p>
       </div>
 

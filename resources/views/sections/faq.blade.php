@@ -1,4 +1,4 @@
-<section id="faq" class="wow fadeInUp">
+<section id="faq" class="wow fadeInUp" style="visibility: visible">
 
   <div class="container">
 
@@ -19,7 +19,7 @@
                 </div>
               </li>
             @endforeach
-  
+
           </ul>
       </div>
     </div>

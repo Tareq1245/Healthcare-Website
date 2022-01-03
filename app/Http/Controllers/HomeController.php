@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Facility;
+use App\Service;
 use App\Setting;
 use App\Speaker;
 use App\Schedule;
@@ -23,21 +25,23 @@ class HomeController extends Controller
             ->orderBy('start_time', 'asc')
             ->get()
             ->groupBy('day_number');
-        $venues = Venue::all();
+
         $hotels = Hotel::all();
         $galleries = Gallery::all();
         $sponsors = Sponsor::all();
         $faqs = Faq::all();
         $prices = Price::with('amenities')->get();
         $amenities = Amenity::with('prices')->get();
+        $services = Service::all();
+        $facilities = Facility::all();
 
-        return view('home', compact('settings', 'speakers', 'schedules', 'venues', 'hotels', 'galleries', 'sponsors', 'faqs', 'prices', 'amenities'));
+        return view('home', compact('settings', 'speakers', 'schedules', 'services', 'hotels', 'galleries', 'sponsors', 'faqs', 'prices', 'amenities', 'facilities'));
     }
 
     public function view(Speaker $speaker)
     {
         $settings = Setting::pluck('value', 'key');
-        
+
         return view('speaker', compact('settings', 'speaker'));
     }
 }

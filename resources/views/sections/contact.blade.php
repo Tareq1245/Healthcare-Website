@@ -1,4 +1,4 @@
-<section id="contact" class="section-bg wow fadeInUp">
+<section id="contact" class="section-bg wow fadeInUp" style="visibility: visible">
 
   <div class="container">
 
@@ -39,6 +39,7 @@
       <div id="sendmessage">Your message has been sent. Thank you!</div>
       <div id="errormessage"></div>
       <form action="" method="post" role="form" class="contactForm">
+          @csrf
         <div class="form-row">
           <div class="form-group col-md-6">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />

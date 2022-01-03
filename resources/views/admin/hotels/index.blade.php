@@ -28,18 +28,18 @@
                         <th>
                             {{ trans('cruds.hotel.fields.name') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.hotel.fields.photo') }}
-                        </th>
+{{--                        <th>--}}
+{{--                            {{ trans('cruds.hotel.fields.photo') }}--}}
+{{--                        </th>--}}
                         <th>
                             {{ trans('cruds.hotel.fields.address') }}
                         </th>
                         <th>
                             {{ trans('cruds.hotel.fields.description') }}
                         </th>
-                        <th>
-                            {{ trans('cruds.hotel.fields.rating') }}
-                        </th>
+{{--                        <th>--}}
+{{--                            {{ trans('cruds.hotel.fields.rating') }}--}}
+{{--                        </th>--}}
                         <th>
                             &nbsp;
                         </th>
@@ -57,22 +57,22 @@
                             <td>
                                 {{ $hotel->name ?? '' }}
                             </td>
-                            <td>
-                                @if($hotel->photo)
-                                    <a href="{{ $hotel->photo->getUrl() }}" target="_blank">
-                                        <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">
-                                    </a>
-                                @endif
-                            </td>
+{{--                            <td>--}}
+{{--                                @if($hotel->photo)--}}
+{{--                                    <a href="{{ $hotel->photo->getUrl() }}" target="_blank">--}}
+{{--                                        <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">--}}
+{{--                                    </a>--}}
+{{--                                @endif--}}
+{{--                            </td>--}}
                             <td>
                                 {{ $hotel->address ?? '' }}
                             </td>
                             <td>
                                 {{ $hotel->description ?? '' }}
                             </td>
-                            <td>
-                                {{ $hotel->rating ?? '' }}
-                            </td>
+{{--                            <td>--}}
+{{--                                {{ $hotel->rating ?? '' }}--}}
+{{--                            </td>--}}
                             <td>
                                 @can('hotel_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.hotels.show', $hotel->id) }}">

@@ -1,40 +1,48 @@
-<section id="schedule" class="section-with-bg">
-  <div class="container wow fadeInUp">
-    <div class="section-header">
-      <h2>Event Schedule</h2>
-      <p>Here is our event schedule</p>
-    </div>
 
-    <ul class="nav nav-tabs" role="tablist">
-      @foreach($schedules as $key => $day)
-        <li class="nav-item">
-          <a class="nav-link{{ $key === 1 ? ' active' : '' }}" href="#day-{{ $key }}" role="tab" data-toggle="tab">Day {{ $key }}</a>
-        </li>
-      @endforeach
-    </ul>
+<section id="facilities" class="departments">
 
-    <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-      necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+    <div class="container">
 
-    <div class="tab-content row justify-content-center">
-      @foreach($schedules as $key => $day)
-        <div role="tabpanel" class="col-lg-9 tab-pane fade{{ $key === 1 ? ' show active' : '' }}" id="day-{{ $key }}">
-          @foreach($day as $schedule)
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>{{ \Carbon\Carbon::parse($schedule->start_time)->format("h:i A") }}</time></div>
-              <div class="col-md-10">
-                @if($schedule->speaker)
-                  <div class="speaker">
-                    <img src="{{ $schedule->speaker->photo->getUrl() }}" alt="{{ $schedule->speaker->name }}">
-                  </div>
-                @endif
-                <h4>{{ $schedule->title }} @if($schedule->speaker)<span>{{ $schedule->speaker->name }}</span>@endif</h4>
-                <p>{{ $schedule->subtitle }}</p>
-              </div>
-            </div>
-          @endforeach
+        <div class="section-title">
+            <h2>EmmanuelHealth Facility</h2>
+            <p>{!! $settings['facility_description'] !!}</p>
         </div>
-      @endforeach
+
+        <div class="row">
+
+                <div class="col-lg-3">
+
+                    <ul class="nav nav-tabs flex-column">
+                        @foreach($facilities as $index => $team)
+                        <li class="nav-item {{ ($index == 0) ? 'active show':'' }}">
+                            <a class="nav-link" data-toggle="tab" href="#tab-{{ $team->id }}">{{$team->title}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        @foreach($facilities as $index => $team)
+                        <div class="tab-pane {{ ($index == 0) ? 'active show':'' }}" id="tab-{{ $team->id }}">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>{{$team->title}}</h3>
+
+                                    <p>{{$team->message}}</p>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{asset('storage/service/'.$team->image)}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>

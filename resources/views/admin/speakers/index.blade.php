@@ -3,7 +3,7 @@
 @can('speaker_create')
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
-            <a class="btn btn-success" href="{{ route("admin.speakers.create") }}">
+            <a class="btn btn-success" href="{{ route('admin.speakers.create') }}">
                 {{ trans('global.add') }} {{ trans('cruds.speaker.title_singular') }}
             </a>
         </div>

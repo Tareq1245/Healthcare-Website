@@ -1,8 +1,8 @@
-<section id="speakers" class="wow fadeInUp">
+<section id="speakers" class="wow fadeInUp" style="visibility: visible">
   <div class="container">
     <div class="section-header">
-      <h2>Event Speakers</h2>
-      <p>Here are some of our speakers</p>
+      <h2>Doctors</h2>
+      <p>Here are some of our Team Members</p>
     </div>
 
     <div class="row">

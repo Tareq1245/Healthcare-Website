@@ -1,4 +1,4 @@
-<header id="header"@if(Route::current()->getName() != 'home') class="header-fixed"@endif>
+<header id="header" class="header-scrolled">
   <div class="container">
 
     <div id="logo" class="pull-left">
@@ -10,18 +10,17 @@
       </h1>
     </div>
 
-    <nav id="nav-menu-container">
+    <nav id="nav-menu-containers">
       <ul class="nav-menu">
         <li class="menu-active"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#intro">Home</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#about">About</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#speakers">Speakers</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#schedule">Schedule</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#venue">Venue</a></li>
-        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#hotels">Hotels</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#abouts">About</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#speakers">Doctors</a></li>
+          <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#facilities">Facility</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#services">Service</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#gallery">Gallery</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#supporters">Sponsors</a></li>
         <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#contact">Contact</a></li>
-        <li class="buy-tickets"><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Buy Tickets</a></li>
+        <li><a href="{{ Route::current()->getName() != 'home' ? route('home') : '' }}#buy-tickets">Donations</a></li>
       </ul>
     </nav>
   </div>

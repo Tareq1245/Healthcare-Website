@@ -3,6 +3,7 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('speaker/{speaker}', 'HomeController@view')->name('speaker');
 Route::redirect('/home', '/admin');
+Route::post('/message', 'MessageController@store')->name('message.store');
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
@@ -35,7 +36,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Venues
     Route::delete('venues/destroy', 'VenuesController@massDestroy')->name('venues.massDestroy');
     Route::post('venues/media', 'VenuesController@storeMedia')->name('venues.storeMedia');
-    Route::resource('venues', 'VenuesController');
+    Route::resource('services', 'ServiceController');
 
     // Hotels
     Route::delete('hotels/destroy', 'HotelsController@massDestroy')->name('hotels.massDestroy');
@@ -63,4 +64,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Prices
     Route::delete('prices/destroy', 'PricesController@massDestroy')->name('prices.massDestroy');
     Route::resource('prices', 'PricesController');
+
+    //Messages
+    Route::get('/message', 'MessageController@index')->name('message.index');
+    Route::resource('/facilities', 'FacilityController');
 });

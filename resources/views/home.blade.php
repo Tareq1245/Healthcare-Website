@@ -12,15 +12,12 @@
 
   @include('sections.venues')
 
-  @include('sections.hotels')
-
-  @include('sections.gallery')
-
   @include('sections.sponsors')
+    @include('sections.gallery')
 
   @include('sections.faq')
 
-  @include('sections.subscribe')
+{{--  @include('sections.subscribe')--}}
 
   @include('sections.buy_ticket')
 

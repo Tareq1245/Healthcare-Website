@@ -84,8 +84,8 @@ return [
         ],
     ],
     'speaker'        => [
-        'title'          => 'Speakers',
-        'title_singular' => 'Speaker',
+        'title'          => 'Doctors',
+        'title_singular' => 'Doctor',
         'fields'         => [
             'id'                      => 'ID',
             'id_helper'               => '',
@@ -136,8 +136,8 @@ return [
         ],
     ],
     'venue'          => [
-        'title'          => 'Venues',
-        'title_singular' => 'Venue',
+        'title'          => 'Services',
+        'title_singular' => 'Service',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',
@@ -162,8 +162,8 @@ return [
         ],
     ],
     'hotel'          => [
-        'title'          => 'Hotels',
-        'title_singular' => 'Hotel',
+        'title'          => 'Abouts',
+        'title_singular' => 'About',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',
@@ -171,7 +171,7 @@ return [
             'name_helper'        => '',
             'photo'              => 'Photo',
             'photo_helper'       => '',
-            'address'            => 'Address',
+            'address'            => 'Icon Link',
             'address_helper'     => '',
             'description'        => 'Description',
             'description_helper' => '',
@@ -242,8 +242,8 @@ return [
         ],
     ],
     'amenity'        => [
-        'title'          => 'Amenities',
-        'title_singular' => 'Amenity',
+        'title'          => 'Facilities',
+        'title_singular' => 'Facility',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',

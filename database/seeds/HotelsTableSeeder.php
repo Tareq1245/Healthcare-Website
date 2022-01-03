@@ -14,20 +14,20 @@ class HotelsTableSeeder extends Seeder
     {
         $hotels = [
             [
-                'name'          => 'Hotel 1',
-                'description'   => '0.4 Mile from the Venue',
-                'rating'        =>  5
+                'name'          => 'Our Mission',
+                'description'   => 'Improving access to primary care services in underserved communities and utilizing a proffessional team approach to health care delivery are the main focuses of EmmanuelHealth Clinic.'
+
             ],
             [
-                'name'          => 'Hotel 2',
-                'description'   => '0.5 Mile from the Venue',
-                'rating'        =>  4
+                'name'          => 'Our Objective',
+                'description'   => 'Expand and improve access to preventive services, home and community-based services, social supports, and care management.',
+
             ],
-            [
-                'name'          => 'Hotel 3',
-                'description'   => '0.6 Mile from the Venue',
-                'rating'        =>  3
-            ],
+//            [
+//                'name'          => 'Hotel 3',
+//                'description'   => '0.6 Mile from the Venue',
+//                'rating'        =>  3
+//            ],
         ];
 
         foreach($hotels as $key => $hotel)

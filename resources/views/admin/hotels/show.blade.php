@@ -26,18 +26,18 @@
                             {{ $hotel->name }}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.hotel.fields.photo') }}
-                        </th>
-                        <td>
-                            @if($hotel->photo)
-                                <a href="{{ $hotel->photo->getUrl() }}" target="_blank">
-                                    <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">
-                                </a>
-                            @endif
-                        </td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <th>--}}
+{{--                            {{ trans('cruds.hotel.fields.photo') }}--}}
+{{--                        </th>--}}
+{{--                        <td>--}}
+{{--                            @if($hotel->photo)--}}
+{{--                                <a href="{{ $hotel->photo->getUrl() }}" target="_blank">--}}
+{{--                                    <img src="{{ $hotel->photo->getUrl('thumb') }}" width="50px" height="50px">--}}
+{{--                                </a>--}}
+{{--                            @endif--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
                     <tr>
                         <th>
                             {{ trans('cruds.hotel.fields.address') }}
@@ -54,14 +54,14 @@
                             {!! $hotel->description !!}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.hotel.fields.rating') }}
-                        </th>
-                        <td>
-                            {{ $hotel->rating }}
-                        </td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <th>--}}
+{{--                            {{ trans('cruds.hotel.fields.rating') }}--}}
+{{--                        </th>--}}
+{{--                        <td>--}}
+{{--                            {{ $hotel->rating }}--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
                 </tbody>
             </table>
             <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
